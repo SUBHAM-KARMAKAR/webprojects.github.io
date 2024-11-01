@@ -1,6 +1,8 @@
+/* General Reset and Styling */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: sans-serif;
 }
 
@@ -8,10 +10,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #250057;
 }
 
+/* Main Container */
 .hero {
     width: 100%;
     height: 100vh;
@@ -20,147 +23,159 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    box-sizing: border-box;
 }
 
+/* Selector Box with Enhanced Glassmorphism */
 .selector {
     width: 100%;
-    max-width: 500px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    box-sizing: border-box;
-    backdrop-filter: blur(10px);
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.selector:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Select Field Styling */
 #selectField {
     width: 100%;
-    padding: 20px 25px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
+    padding: 25px 30px;
+    margin-bottom: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.2rem;
 }
 
 #selectField:hover {
     background: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Dropdown Icon */
 #selectField img {
-    width: 16px;
+    width: 20px;
     transition: transform 0.5s;
 }
 
+/* Dropdown List */
 #list {
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: max-height 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: max-height 0.4s ease, visibility 0.4s ease;
 }
 
+/* Options Styling */
 .options {
     width: 100%;
-    padding: 20px 0 20px 80px;
+    padding: 25px 0 25px 100px;
     list-style: none;
     cursor: pointer;
-    box-sizing: border-box;
     position: relative;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, padding 0.3s ease;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 }
 
 .options img {
-    width: 30px;
+    width: 35px;
     position: absolute;
-    top: 15px;
-    left: 25px;
+    top: 20px;
+    left: 30px;
 }
 
 .options:hover {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
+    padding-left: 105px;
 }
 
+/* Toggle Hidden Dropdown */
 .hide {
     max-height: 0;
     visibility: hidden;
 }
 
+.show {
+    max-height: 500px;
+    visibility: visible;
+}
+
+/* Rotate Icon */
 .rotate {
     transform: rotate(180deg);
 }
 
-/* Media Queries for Medium Screens */
+/* Responsive Design */
+/* Medium Screens */
 @media (max-width: 768px) {
     .selector {
-        max-width: 400px;
+        max-width: 450px;
+        padding: 20px;
+    }
+    #selectField {
+        padding: 20px 25px;
+        font-size: 1.1rem;
+    }
+    .options {
+        padding: 20px 0 20px 85px;
+    }
+    .options img {
+        width: 30px;
+        top: 15px;
+        left: 25px;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 480px) {
+    .selector {
+        max-width: 320px;
         padding: 15px;
     }
-
     #selectField {
-        padding: 16px 20px;
-        margin-bottom: 25px;
+        padding: 18px 22px;
+        font-size: 1rem;
     }
-
     .options {
-        padding: 16px 0 16px 70px;
+        padding: 18px 0 18px 75px;
     }
-
     .options img {
-        width: 25px;
+        width: 28px;
         top: 12px;
         left: 20px;
     }
 }
 
-/* Media Queries for Small Screens */
-@media (max-width: 480px) {
-    .selector {
-        max-width: 300px;
-        padding: 10px;
-    }
-
-    #selectField {
-        padding: 14px 18px;
-        margin-bottom: 20px;
-    }
-
-    .options {
-        padding: 14px 0 14px 60px;
-    }
-
-    .options img {
-        width: 22px;
-        top: 10px;
-        left: 15px;
-    }
-}
-
-/* Media Queries for Extra Small Screens */
+/* Extra Small Screens */
 @media (max-width: 360px) {
     .selector {
-        max-width: 250px;
+        max-width: 280px;
         padding: 10px;
     }
-
     #selectField {
-        padding: 12px 16px;
-        margin-bottom: 15px;
+        padding: 15px 20px;
+        font-size: 0.9rem;
     }
-
     .options {
-        padding: 12px 0 12px 50px;
+        padding: 15px 0 15px 65px;
     }
-
     .options img {
-        width: 20px;
-        top: 8px;
-        left: 10px;
+        width: 25px;
+        top: 10px;
+        left: 15px;
     }
 }
