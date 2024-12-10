@@ -5,25 +5,25 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-image: url('o.jpg'); /* Using the Oasis Infobyte image */
-    background-size: cover; /* Ensures the image covers the entire viewport */
-    background-repeat: no-repeat; /* Prevents tiling */
-    background-position: center; /* Centers the image */
-    background-attachment: scroll; /* Ensures the background stays in place on scroll */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
     color: #fff; /* Sets text color for better visibility */
 }
 
 /* Container for Sections */
 .container {
-    background-color: rgba(0, 0, 0, 0.4); /* Reduced black overlay opacity for better background visibility */
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 20px;
     border-radius: 10px;
     margin: 20px auto;
     max-width: 1200px;
-    transition: transform 0.3s ease-in-out; /* Adds a hover effect on the container */
+    transition: transform 0.3s ease-in-out;
 }
 
 .container:hover {
-    transform: scale(1.05); /* Slightly enlarges the container on hover */
+    transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -58,7 +58,7 @@ body {
 
 .cta-button:hover {
     background-color: #e64a19;
-    transform: scale(1.1); /* Enlarges the button slightly on hover */
+    transform: scale(1.1);
 }
 
 /* Features Section */
@@ -81,8 +81,8 @@ body {
 }
 
 .feature-item:hover {
-    transform: translateY(-10px); /* Slightly moves up on hover */
-    background-color: rgba(0, 0, 0, 0.6); /* Reduced black overlay for hover effect */
+    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .feature-text h2 {
@@ -105,7 +105,7 @@ body {
 
 .btn:hover {
     background-color: #e64a19;
-    transform: scale(1.1); /* Enlarges the button slightly on hover */
+    transform: scale(1.1);
 }
 
 .feature-image img {
@@ -114,15 +114,15 @@ body {
 }
 
 .feature-image img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1);
 }
 
 /* Devices Section */
 .devices {
     text-align: center;
     padding: 60px 20px;
-    background-color: rgba(0, 0, 0, 0.3); /* Reduced overlay opacity for better background visibility */
-    border-radius: 10px; /* Adds border radius to make it more stylish */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .row-icons {
@@ -133,18 +133,18 @@ body {
 }
 
 .device-icons img {
-    width: 100px; /* Increased icon size for better visibility */
+    width: 100px;
     height: auto;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-    border-radius: 8px; /* Rounded corners for icons */
+    border-radius: 8px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.3); /* Added light background for icon contrast */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Added shadow for better visibility */
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .device-icons img:hover {
-    transform: scale(1.2); /* Zoom effect on hover */
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6); /* More prominent shadow on hover */
+    transform: scale(1.2);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
 /* Stats Section */
@@ -161,7 +161,7 @@ body {
 }
 
 .stat {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.8);
     color: #333;
     padding: 20px;
     border-radius: 10px;
@@ -170,8 +170,8 @@ body {
 }
 
 .stat:hover {
-    transform: translateY(-10px); /* Moves up slightly on hover */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Adds a glow effect */
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 /* Footer */
@@ -179,7 +179,7 @@ footer {
     text-align: center;
     padding: 20px;
     color: #fff;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for footer */
+    background: rgba(0, 0, 0, 0.6);
 }
 
 /* Keyframes for Animations */
@@ -221,6 +221,18 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        background-image: url('o2.jpg'); /* Using a different background for small screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
     .feature-item {
         flex-direction: column;
         text-align: center;
@@ -232,84 +244,12 @@ footer {
 
     .row-icons {
         flex-direction: column;
-    }
-}
-/* Responsive Design Adjustments */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 2.5rem;
+        gap: 20px;
     }
 
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .cta-button {
+    .cta-button, .btn {
         font-size: 0.9rem;
         padding: 10px 20px;
-    }
-
-    .feature-text h2 {
-        font-size: 1.8rem;
-    }
-
-    .feature-text p {
-        font-size: 1rem;
-    }
-
-    .feature-image img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
-
-    .device-icons img {
-        width: 80px;
-    }
-
-    .stat h3 {
-        font-size: 1.5rem;
-    }
-
-    .stat p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding: 80px 10px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .features {
-        padding: 40px 10px;
-    }
-
-    .feature-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .feature-image img {
-        max-width: 250px;
-    }
-
-    .devices {
-        padding: 40px 10px;
-    }
-
-    .row-icons {
-        flex-direction: column;
-        gap: 20px;
     }
 
     .stats-grid {
@@ -317,12 +257,9 @@ footer {
         gap: 20px;
     }
 
-    .stat h3 {
-        font-size: 1.8rem;
-    }
-
-    .stat p {
-        font-size: 1rem;
+    .stat {
+        font-size: 0.9rem;
+        padding: 15px;
     }
 }
 
@@ -338,38 +275,4 @@ footer {
     .hero p {
         font-size: 0.9rem;
     }
-
-    .cta-button {
-        font-size: 0.8rem;
-        padding: 8px 16px;
-    }
-
-    .feature-text h2 {
-        font-size: 1.5rem;
-    }
-
-    .feature-text p {
-        font-size: 0.9rem;
-    }
-
-    .feature-image img {
-        max-width: 200px;
-    }
-
-    .device-icons img {
-        width: 60px;
-    }
-
-    .stat h3 {
-        font-size: 1.5rem;
-    }
-
-    .stat p {
-        font-size: 0.9rem;
-    }
-
-    footer {
-        font-size: 0.8rem;
-    }
 }
-
