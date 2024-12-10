@@ -1,0 +1,236 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('o.jpg'); /* Using the Oasis Infobyte image */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    background-attachment: scroll; /* Ensures the background stays in place on scroll */
+    color: #fff; /* Sets text color for better visibility */
+}
+
+/* Container for Sections */
+.container {
+    background-color: rgba(0, 0, 0, 0.4); /* Reduced black overlay opacity for better background visibility */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    transition: transform 0.3s ease-in-out; /* Adds a hover effect on the container */
+}
+
+.container:hover {
+    transform: scale(1.05); /* Slightly enlarges the container on hover */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    animation: pulse 2s infinite;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.1); /* Enlarges the button slightly on hover */
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    animation: slideLeft 1s ease-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.feature-item.reverse {
+    flex-direction: row-reverse;
+    animation: slideRight 1s ease-out;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px); /* Slightly moves up on hover */
+    background-color: rgba(0, 0, 0, 0.6); /* Reduced black overlay for hover effect */
+}
+
+.feature-text h2 {
+    font-size: 2rem;
+}
+
+.feature-text p {
+    margin: 10px 0 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #e64a19;
+    transform: scale(1.1); /* Enlarges the button slightly on hover */
+}
+
+.feature-image img {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-image img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Devices Section */
+.devices {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Reduced overlay opacity for better background visibility */
+    border-radius: 10px; /* Adds border radius to make it more stylish */
+}
+
+.row-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.device-icons img {
+    width: 100px; /* Increased icon size for better visibility */
+    height: auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    border-radius: 8px; /* Rounded corners for icons */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3); /* Added light background for icon contrast */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Added shadow for better visibility */
+}
+
+.device-icons img:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6); /* More prominent shadow on hover */
+}
+
+/* Stats Section */
+.stats {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.stat {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.stat:hover {
+    transform: translateY(-10px); /* Moves up slightly on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Adds a glow effect */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for footer */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-item.reverse {
+        flex-direction: column;
+    }
+
+    .row-icons {
+        flex-direction: column;
+    }
+}
